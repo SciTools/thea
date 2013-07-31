@@ -1,0 +1,1457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1264</width>
+    <height>807</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>cubeviz</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QSplitter" name="splitter_2">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QFrame" name="frame">
+           <property name="minimumSize">
+            <size>
+             <width>500</width>
+             <height>200</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="1" column="0">
+             <widget class="MatplotlibWidget" name="matplotlib_display" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>300</width>
+                <height>180</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QTabWidget" name="cube_info_tab">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="currentIndex">
+            <number>1</number>
+           </property>
+           <widget class="QWidget" name="print_cube_tab">
+            <property name="toolTip">
+             <string>displays the summary of the loaded cube</string>
+            </property>
+            <attribute name="title">
+             <string>Full Cube</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="0">
+              <widget class="QTextBrowser" name="print_cube_browser">
+               <property name="font">
+                <font>
+                 <family>DejaVu Sans Mono</family>
+                 <pointsize>10</pointsize>
+                 <weight>50</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 10pt &quot;Liberation Mono&quot;;
+font: 10pt &quot;DejaVu Sans Mono&quot;;</string>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAsNeeded</enum>
+               </property>
+               <property name="horizontalScrollBarPolicy">
+                <enum>Qt::ScrollBarAsNeeded</enum>
+               </property>
+               <property name="lineWrapMode">
+                <enum>QTextEdit::NoWrap</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="print_slice_tab">
+            <property name="toolTip">
+             <string>displays the summary of the currently plotted slice</string>
+            </property>
+            <attribute name="title">
+             <string>Plotted Slice</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="0" column="0">
+              <widget class="QTextBrowser" name="print_cube_slice_browser">
+               <property name="font">
+                <font>
+                 <family>DejaVu Sans Mono</family>
+                 <pointsize>10</pointsize>
+                 <weight>50</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 10pt &quot;DejaVu Sans Mono&quot;;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="data_tab">
+            <property name="toolTip">
+             <string>Displays the data contained within the currently plotted slice</string>
+            </property>
+            <attribute name="title">
+             <string>Slice Data</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_8"/>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QComboBox" name="select_cube">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Select which cube to view from the current file</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="dim_options_frame">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="1" column="0" colspan="2">
+            <widget class="QLabel" name="axes_dimensions_label">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Axes Dimensions</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="QComboBox" name="select_dimension_1">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Selects the Dimensions to be plotted against</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="2">
+            <widget class="QComboBox" name="select_dimension_2">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Selects the Dimensions to be plotted against</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0" colspan="2">
+            <widget class="QLabel" name="sliced_dimensions_label">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Sliced Dimension</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="QComboBox" name="select_sliced_dim">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Select the dimension that you wish to take slices through</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QComboBox" name="select_slice_combo">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Select the slice you wish to view</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QScrollBar" name="select_slice_scroll">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Select the slice you wish to view</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="0">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="1">
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="11" column="0">
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="11" column="1">
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="10" column="0" colspan="2">
+            <widget class="Line" name="line_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="1">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="12" column="0">
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="13" column="1">
+            <spacer name="verticalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="14" column="0">
+            <spacer name="verticalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="14" column="1">
+            <spacer name="verticalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="15" column="0">
+            <spacer name="verticalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="15" column="1">
+            <spacer name="verticalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="16" column="0">
+            <spacer name="verticalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="16" column="1">
+            <spacer name="verticalSpacer_14">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="19" column="0">
+            <spacer name="verticalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="18" column="1">
+            <spacer name="verticalSpacer_16">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="17" column="0">
+            <spacer name="verticalSpacer_17">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="17" column="1">
+            <spacer name="verticalSpacer_18">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="18" column="0">
+            <spacer name="verticalSpacer_19">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="19" column="1">
+            <spacer name="verticalSpacer_20">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="update_button">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Click this Button to apply changes to the plot</string>
+          </property>
+          <property name="text">
+           <string>Update Image</string>
+          </property>
+          <property name="shortcut">
+           <string>Return</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_open"/>
+   <addaction name="action_save"/>
+   <addaction name="action_source_code"/>
+   <addaction name="action_previous_slice"/>
+   <addaction name="action_next_slice"/>
+   <addaction name="action_coastlines"/>
+   <addaction name="action_gridlines"/>
+   <addaction name="action_contour_labels"/>
+   <addaction name="action_country_boundaries"/>
+   <addaction name="action_rivers_and_lakes"/>
+   <addaction name="action_fix_colorbar"/>
+   <addaction name="action_colorbar"/>
+   <addaction name="action_load_slices"/>
+   <addaction name="action_plot_menu"/>
+   <addaction name="action_full_screen"/>
+   <addaction name="action_about"/>
+   <addaction name="action_exit"/>
+  </widget>
+  <widget class="QDockWidget" name="plot_menu">
+   <property name="features">
+    <set>QDockWidget::DockWidgetMovable|QDockWidget::DockWidgetVerticalTitleBar</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomDockWidgetArea|Qt::TopDockWidgetArea</set>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>4</number>
+   </attribute>
+   <widget class="QWidget" name="plot_menu_contents">
+    <layout class="QGridLayout" name="gridLayout_7">
+     <item row="0" column="1">
+      <widget class="QLabel" name="plot_type_label">
+       <property name="text">
+        <string>Plot Type</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="plot_projection_label">
+       <property name="text">
+        <string>Plot Projection</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QLabel" name="color_scheme_label">
+       <property name="text">
+        <string>Colour Scheme</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QComboBox" name="select_plot_type">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>Select the type of plot to be used</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>pcolormesh</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Filled Contour</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Contour</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="QComboBox" name="select_projection">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>select the map projection to be used</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Automatic</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Plate Carree</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lambert Cylindrical</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mercator</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Miller</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Orthographic</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Robinson</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Stereographic</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rotated Pole</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>OSGB</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>EuroPP</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>North Polar Stereo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>OSNI</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>South Polar Stereo</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="5" column="5">
+      <widget class="QComboBox" name="select_colormap">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>Select the colour scheme to be used</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Automatic</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Accent_08</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Blues_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_BrBG_11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_BuGn_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_BuPu_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Dark2_08</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_GnBu_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Greens_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Greys_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_OrRd_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Oranges_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_PRGn_11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Paired_12</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Pastel1_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Pastel2_08</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_PiYG_11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_PuBuGn_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_PuBu_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_PuOr_11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_PuRd_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Purples_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_RdBu_11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_RdGy_11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_RdPu_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_RdYlBu_11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_RdYlGn_11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Reds_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Set1_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Set2_08</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Set3_12</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_Spectral_11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_YlGnBu_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_YlGn_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_YlOrBr_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_YlOrBr_09</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>brewer_YlOrRd_09</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="5" column="7">
+      <widget class="QSlider" name="contour_slider">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>select the number of contours to be plotted</string>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>50</number>
+       </property>
+       <property name="value">
+        <number>25</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QComboBox" name="select_plot_method">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <item>
+        <property name="text">
+         <string>from data array</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>using quickplot</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Plot Method</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QFrame" name="frame_2">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="num_contours_label">
+          <property name="text">
+           <string>No. of Contours  = </string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="contour_label">
+          <property name="text">
+           <string>25</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="5" column="4">
+      <widget class="QDoubleSpinBox" name="select_central_longitude">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximum">
+        <double>360.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>5.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Central Longitude</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="action_open">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Click to open a file (shortcut Ctrl + O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save the current Image (shortcut Ctrl + S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+  <action name="action_coastlines">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Coastlines</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle coastlines drawn on plot (shortcut C)</string>
+   </property>
+   <property name="shortcut">
+    <string>C</string>
+   </property>
+  </action>
+  <action name="action_gridlines">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Gridlines</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle gridlines drawn on plot (shortcut G)</string>
+   </property>
+   <property name="shortcut">
+    <string>G</string>
+   </property>
+  </action>
+  <action name="action_country_boundaries">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Country Boundaries</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle Country Boundaries Drawn (shortcut B)</string>
+   </property>
+   <property name="shortcut">
+    <string>B</string>
+   </property>
+  </action>
+  <action name="action_rivers_and_lakes">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Rivers and Lakes</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle Rivers and Lakes drawn (shortcut R)</string>
+   </property>
+   <property name="shortcut">
+    <string>R</string>
+   </property>
+  </action>
+  <action name="action_next_slice">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Next Slice</string>
+   </property>
+   <property name="toolTip">
+    <string>View the Next Slice (shortcut 6)</string>
+   </property>
+   <property name="shortcut">
+    <string>6</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_previous_slice">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Previous Slice</string>
+   </property>
+   <property name="toolTip">
+    <string>View the Previous Slice (shortcut 4)</string>
+   </property>
+   <property name="shortcut">
+    <string>4</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_fix_colorbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Fix Colorbar</string>
+   </property>
+   <property name="shortcut">
+    <string>F</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_colorbar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Colorbar Range</string>
+   </property>
+   <property name="toolTip">
+    <string>Set the range of the colorbar (shortcut O)</string>
+   </property>
+   <property name="shortcut">
+    <string>O</string>
+   </property>
+  </action>
+  <action name="action_plot_menu">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Plot Menu</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle the Plot Menu (shortcut M)</string>
+   </property>
+   <property name="shortcut">
+    <string>M</string>
+   </property>
+  </action>
+  <action name="action_contour_labels">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Contour Labels</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle contour lables drawn on plot (shortcut L)</string>
+   </property>
+   <property name="shortcut">
+    <string>L</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_full_screen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Full Screen</string>
+   </property>
+   <property name="shortcut">
+    <string>Q</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_load_slices">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Load All Slices</string>
+   </property>
+   <property name="toolTip">
+    <string>Loads all slices of the cube along the sliced dimension at once. This will then reduce the loading time between slices.</string>
+   </property>
+   <property name="shortcut">
+    <string>L</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="toolTip">
+    <string>General Information</string>
+   </property>
+  </action>
+  <action name="action_source_code">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Source Code</string>
+   </property>
+   <property name="shortcut">
+    <string>S</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MatplotlibWidget</class>
+   <extends>QWidget</extends>
+   <header>thea.matplotlib_widget</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>action_exit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>403</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>contour_slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>contour_label</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>726</x>
+     <y>328</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>856</x>
+     <y>328</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_slice_combo</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>select_slice_scroll</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>633</x>
+     <y>347</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>777</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_slice_scroll</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>select_slice_combo</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>777</x>
+     <y>347</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>633</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_plot_menu</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plot_menu</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>472</x>
+     <y>79</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
