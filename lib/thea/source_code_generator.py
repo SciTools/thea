@@ -133,7 +133,7 @@ def add_imports(code, can_draw_map, projection, cartographic):
         if projection != 'Automatic':
             code += "import cartopy.crs as ccrs\n"
         if rivers or countries:
-            code += "import cartopy.feature as feature\n"
+            code += "import cartopy.feature as cfeature\n"
     code += "\n\n"
 
     return code
@@ -416,7 +416,7 @@ def add_cartographic(code, plot_method, can_draw_map, cartographic):
                 code += "plt.gca().coastlines()\n"
                 code += "\n"
             if countries:
-                code += "countries = feature.NaturalEarthFeature("
+                code += "countries = cfeature.NaturalEarthFeature("
                 code += "   category='cultural',\n"
                 code += "   name='admin_0_countries',\n"
                 code += "   scale='50m',\n"
@@ -424,8 +424,8 @@ def add_cartographic(code, plot_method, can_draw_map, cartographic):
                 code += "plt.gca().add_feature(countries)\n"
                 code += "\n"
             if rivers:
-                code += "plt.gca().add_feature(feature.RIVERS)\n"
-                code += "plt.gca().add_feature(feature.LAKES)\n"
+                code += "plt.gca().add_feature(cfeature.RIVERS)\n"
+                code += "plt.gca().add_feature(cfeature.LAKES)\n"
                 code += "\n"
     return code
 

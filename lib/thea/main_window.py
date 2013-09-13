@@ -320,9 +320,7 @@ class MainWindow(QtGui.QMainWindow, main_window_layout.Ui_MainWindow):
         this to default to the last folder that the program was in.
 
         """
-        self.filename, _ = QtGui.QFileDialog.getOpenFileName(
-            self, 'Open File',
-            '/project/avd/iris/resources/public_sample_data_1.0')
+        self.filename, _ = QtGui.QFileDialog.getOpenFileName(self, 'Open File')
 
         QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
         self.statusBar().showMessage('Loading Cube')

@@ -386,8 +386,8 @@ def set_cartographic(cartographic):
         plt.gca().add_feature(countries)
 
     if rivers:
-        plt.gca().add_feature(feature.RIVERS)
-        plt.gca().add_feature(feature.LAKES)
+        plt.gca().add_feature(cfeature.RIVERS)
+        plt.gca().add_feature(cfeature.LAKES)
 
 
 def set_gridlines(gridlines):
