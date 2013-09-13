@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ColorbarDialog</class>
+ <widget class="QDialog" name="ColorbarDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>418</width>
+    <height>199</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Colorbar Range</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="7" column="1">
+    <widget class="QCheckBox" name="autoselect_range">
+     <property name="toolTip">
+      <string>Select the range over which the colorbar is set</string>
+     </property>
+     <property name="text">
+      <string>Automatic</string>
+     </property>
+     <property name="shortcut">
+      <string>A</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2">
+    <widget class="QCheckBox" name="fixed_colorbar">
+     <property name="text">
+      <string>Fix Across all Slices</string>
+     </property>
+     <property name="shortcut">
+      <string>F</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="3">
+    <widget class="QCheckBox" name="manual_range">
+     <property name="text">
+      <string>Manual</string>
+     </property>
+     <property name="shortcut">
+      <string>M</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2">
+    <widget class="QPushButton" name="ok_button">
+     <property name="text">
+      <string>Ok</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2" colspan="2">
+    <widget class="QDoubleSpinBox" name="max_contour">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="minimum">
+      <double>-999999999.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>999999999.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Max</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Min</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2" colspan="2">
+    <widget class="QDoubleSpinBox" name="min_contour">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="minimum">
+      <double>-999999999.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>999999999.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>manual_range</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>max_contour</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>240</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manual_range</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>min_contour</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ok_button</sender>
+   <signal>clicked()</signal>
+   <receiver>ColorbarDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>208</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
