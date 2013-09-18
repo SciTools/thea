@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'main_window_layout.ui'
 #
-# Created: Thu Sep 12 14:38:17 2013
-#      by: pyside-uic 0.2.14 running on PySide 1.1.2
+# Created: Wed Sep 18 12:42:07 2013
+#      by: pyside-uic 0.2.13 running on PySide 1.1.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -305,19 +305,19 @@ class Ui_MainWindow(object):
         self.label = QtGui.QLabel(self.plot_menu_contents)
         self.label.setObjectName("label")
         self.gridLayout_7.addWidget(self.label, 0, 0, 1, 1)
-        self.frame_2 = QtGui.QFrame(self.plot_menu_contents)
-        self.frame_2.setFrameShape(QtGui.QFrame.NoFrame)
-        self.frame_2.setFrameShadow(QtGui.QFrame.Raised)
-        self.frame_2.setObjectName("frame_2")
-        self.gridLayout_4 = QtGui.QGridLayout(self.frame_2)
+        self.contour_label_frame = QtGui.QFrame(self.plot_menu_contents)
+        self.contour_label_frame.setFrameShape(QtGui.QFrame.NoFrame)
+        self.contour_label_frame.setFrameShadow(QtGui.QFrame.Raised)
+        self.contour_label_frame.setObjectName("contour_label_frame")
+        self.gridLayout_4 = QtGui.QGridLayout(self.contour_label_frame)
         self.gridLayout_4.setObjectName("gridLayout_4")
-        self.num_contours_label = QtGui.QLabel(self.frame_2)
+        self.num_contours_label = QtGui.QLabel(self.contour_label_frame)
         self.num_contours_label.setObjectName("num_contours_label")
         self.gridLayout_4.addWidget(self.num_contours_label, 0, 0, 1, 1)
-        self.contour_label = QtGui.QLabel(self.frame_2)
+        self.contour_label = QtGui.QLabel(self.contour_label_frame)
         self.contour_label.setObjectName("contour_label")
         self.gridLayout_4.addWidget(self.contour_label, 0, 1, 1, 1)
-        self.gridLayout_7.addWidget(self.frame_2, 0, 7, 1, 1)
+        self.gridLayout_7.addWidget(self.contour_label_frame, 0, 7, 1, 1)
         self.select_central_longitude = QtGui.QDoubleSpinBox(self.plot_menu_contents)
         self.select_central_longitude.setEnabled(False)
         self.select_central_longitude.setMinimumSize(QtCore.QSize(150, 0))

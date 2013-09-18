@@ -1043,7 +1043,7 @@ font: 10pt &quot;DejaVu Sans Mono&quot;;</string>
       </widget>
      </item>
      <item row="0" column="7">
-      <widget class="QFrame" name="frame_2">
+      <widget class="QFrame" name="contour_label_frame">
        <property name="frameShape">
         <enum>QFrame::NoFrame</enum>
        </property>

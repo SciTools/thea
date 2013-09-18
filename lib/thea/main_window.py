@@ -106,6 +106,7 @@ class MainWindow(QtGui.QMainWindow, main_window_layout.Ui_MainWindow):
         # collapsed dimension slots are required.
         self.num_collapsed_dims = 0
         self.init_ui()
+        self.set_enabled()
         self.set_actions()
         if not filename is None:
             self.load_file(filename)
@@ -825,6 +826,7 @@ class MainWindow(QtGui.QMainWindow, main_window_layout.Ui_MainWindow):
         self.select_plot_type.setEnabled(state['plot type'])
         self.select_colormap.setEnabled(state['colormap'])
         self.contour_slider.setEnabled(state['contour slider'])
+        self.contour_label_frame.setEnabled(state['contour slider'])
         self.select_sliced_dim.setEnabled(state['third dim'])
         self.select_slice_combo.setEnabled(state['third dim'])
         self.select_slice_scroll.setEnabled(state['third dim'])
