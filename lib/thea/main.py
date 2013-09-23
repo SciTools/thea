@@ -44,7 +44,11 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
+import os.path
 import sys
+
+# Ensures that the package is on the Python path.
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from PySide import QtGui
 
