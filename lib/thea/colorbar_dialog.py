@@ -40,10 +40,10 @@ of the colorbar should be.
 """
 from PySide import QtGui
 
-import thea.generated_code.colorbar_dialog_layout as colorbar_dialog_layout
+from thea.colorbar_dialog_layout import Ui_ColorbarDialog
 
 
-class ColorbarOptions(QtGui.QDialog, colorbar_dialog_layout.Ui_ColorbarDialog):
+class ColorbarOptions(QtGui.QDialog, Ui_ColorbarDialog):
     """
     This class controls the colorbar Range selection dialog box.
 

@@ -50,15 +50,16 @@ from PySide.QtGui import QApplication
 import thea.about_dialog as about_dialog
 import thea.colorbar_dialog as colorbar_dialog
 import thea.cube_logic as cl
-import thea.generated_code.main_window_layout as main_window_layout
 import thea.gui_logic as gl
+from thea.main_window_layout import Ui_MainWindow
 import thea.matplotlib_widget as matplotlib_widget
 import thea.source_code_dialog as source_code_dialog
 import thea.source_code_generator as source_code_generator
 import thea.table_model as table_model
 
 
-class MainWindow(QtGui.QMainWindow, main_window_layout.Ui_MainWindow):
+
+class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
     """
     This class handles all of the direct interactions with the GUI itself. It
     is the class that creates the main window and manages dialog boxes, puts
