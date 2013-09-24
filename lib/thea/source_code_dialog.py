@@ -40,11 +40,10 @@ would generate the current image.
 """
 from PySide import QtGui
 
-import thea.generated_code.source_code_dialog_layout \
-    as source_code_dialog_layout
+from thea.source_code_dialog_layout import Ui_Dialog
 
 
-class Viewer(QtGui.QDialog, source_code_dialog_layout.Ui_Dialog):
+class Viewer(QtGui.QDialog, Ui_Dialog):
     """
     The Viewer Class is a dialog box which gives the user the chance to view
     source code that would generate the plot, and then to save this code. The

@@ -39,10 +39,10 @@ This class is a simple dialog box containing information about the program
 """
 from PySide import QtGui
 
-import thea.generated_code.about_dialog_layout as about_dialog_layout
+from thea.about_dialog_layout import Ui_Dialog
 
 
-class About(QtGui.QDialog, about_dialog_layout.Ui_Dialog):
+class About(QtGui.QDialog, Ui_Dialog):
     """
     This class is a dialog which contains information about the program.
 
