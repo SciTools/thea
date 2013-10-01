@@ -24,10 +24,17 @@ pip-log.txt
 .tox
 nosetests.xml
 
-# Translations
-*.mo
-
-# Mr Developer
-.mr.developer.cfg
 .project
 .pydevproject
+
+# Documentation products
+docs/*.aux
+docs/*.log
+docs/*.toc
+docs/*.pdf
+
+# Build products
+lib/thea/about_dialog_layout.py
+lib/thea/colorbar_dialog_layout.py
+lib/thea/main_window_layout.py
+lib/thea/source_code_dialog_layout.py
